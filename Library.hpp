@@ -3,7 +3,6 @@
 //  Library_Management
 //
 //  Created by Sharad Kangude on 01/01/21.
-//  Copyright © 2021 Sharad Kangude. All rights reserved.
 //
 
 #ifndef Library_hpp

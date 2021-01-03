@@ -3,7 +3,6 @@
 //  Library_Management
 //
 //  Created by Sharad Kangude on 03/01/21.
-//  Copyright © 2021 Sharad Kangude. All rights reserved.
 //
 
 #include "Driver.hpp"
