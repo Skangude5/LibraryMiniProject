@@ -6,6 +6,7 @@
 //
 
 #include "Driver.hpp"
+
 int Driver::getChoice(){
     int x;
     cout<<endl<<endl<<endl;
@@ -17,7 +18,8 @@ int Driver::getChoice(){
     cout<<"6. Display lenders List."<<endl;
     cout<<"7. Quit."<<endl;
     cout<<"Enter choice:";cin>>x;
-    system("clear");
+//    system("clear");
+    cout<<"\033[2J\033[1;1H"<<flush;
     return x;
 }
 void Driver::Start(){
@@ -27,15 +29,15 @@ void Driver::Start(){
             this->library.showBooks();
             break;
         case 2:
-            cout<<"Enter Donor Name:";getline(cin,dName);
+            cout<<"Enter Donor Name:"<<flush;cin>>dName;
             this->library.addBooks(dName);
             break;
         case 3:
-            cout<<"Enter Lender Name:";getline(cin,lName);
+            cout<<"Enter Lender Name:"<<flush;cin>>lName;
             this->library.lendBooks(lName);
             break;
         case 4:
-            cout<<"Enter Lender Name:";getline(cin,lName);
+            cout<<"Enter Lender Name:"<<flush;cin>>lName;
             this->library.returnBooks(lName);
             break;
         case 5:

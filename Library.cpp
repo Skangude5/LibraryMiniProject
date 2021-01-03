@@ -37,7 +37,7 @@ string Library::getBookNameById(int id){
 bool Library::addBooks(string donorName){
     string bName;int bPrice,bQuantity;
     cout<<"Give information of donated Book :"<<endl;
-    cout<<"Enter book name :";getline(cin,bName);
+    cout<<"Enter book name :";cin>>bName;
     cout<<"Enter book quantity :";cin>>bQuantity;
     list<Book>::iterator it = getBookByName(bName);
     map<int, int> Temp;
@@ -65,7 +65,7 @@ bool Library::addBooks(string donorName){
 bool Library::lendBooks(string lenderName){
     string bName;int bQuantity;
     cout<<"Give information of lend Book :"<<endl;
-    cout<<"Enter book name :";getline(cin,bName);
+    cout<<"Enter book name :";cin>>bName;
     cout<<"Enter book quantity :";cin>>bQuantity;
     list<Book>::iterator it = getBookByName(bName);
     map<int, int> Temp;
@@ -168,7 +168,7 @@ bool Library::returnBooks(string lenderName){
         cout<<i<<".\t\t"<<it->first<<"\t\t\t"<<this->getBookNameById(lender->first)<<'\t'<<lender->second<<endl;
         }
         string bName;int bQuantity;
-        cout<<endl<<endl<<"Enter book name to return :";getline(cin,bName);
+        cout<<endl<<endl<<"Enter book name to return :";cin>>bName;
         cout<<"Enter Quantity to return :";cin>>bQuantity;
         list<Book>::iterator Bookit = getBookByName(bName);
         map<int, int> Temp;
